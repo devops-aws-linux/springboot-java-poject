@@ -12,17 +12,22 @@ pipeline {
             }
         }
         
+        // stage('Validate') {
+        //     steps {
+        //         sh "mvn validate"
+        //     }
+        // }
         stage('Compile') {
             steps {
                 sh "mvn compile"
-                 }
+            }
         }
         
-        stage('Package') {
-            steps {
-                sh "mvn clean package"
+        // stage('Package') {
+        //     steps {
+        //         sh "mvn clean package"
                 
-                 }
-        }     
+        //          }
+        // }     
     }
 }
