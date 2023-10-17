@@ -11,17 +11,21 @@ pipeline {
                 git branch: 'main', changelog: false, poll: false, url: 'https://github.com/devops-aws-linux/springboot-java-poject.git'
             }
         }
-        
+        stage('Compile') {
+            steps {
+                sh "mvn clean"
+            }
+        }
         // stage('Validate') {
         //     steps {
         //         sh "mvn validate"
         //     }
         // }
-        stage('Compile') {
-            steps {
-                sh "mvn compile"
-            }
-        }
+        // stage('Compile') {
+        //     steps {
+        //         sh "mvn compile"
+        //     }
+        // }
         
         // stage('Package') {
         //     steps {
