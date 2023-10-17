@@ -11,7 +11,7 @@ pipeline {
                 git branch: 'main', changelog: false, poll: false, url: 'https://github.com/devops-aws-linux/springboot-java-poject.git'
             }
         }
-        stage('Compile') {
+        stage('Clean') {
             steps {
                 sh "mvn clean"
             }
