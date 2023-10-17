@@ -1,14 +1,14 @@
 pipeline {   
     agent any 
     tools{
-        jdk 'jdk11'
+        jdk 'java11'
         maven 'maven3'
     }
 
     stages {
         stage('Git checkout') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/springboot-java-poject.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/devops-aws-linux/springboot-java-poject.git'
             }
         }
         
